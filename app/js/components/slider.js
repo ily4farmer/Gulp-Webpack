@@ -1,7 +1,6 @@
-'use strict'
 
 const slider = () => {
-    console.log(1223);
+    console.log(1);
 }
 
 module.exports = slider;

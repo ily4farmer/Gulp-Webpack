@@ -1,7 +1,8 @@
 module.exports = {
-    mode: process.env.NODE_ENV,
+  // production, development
+    mode: 'development',
       output: {
-        filename: 'script.js',
+        filename: 'script.js'
       },
       module: {
         rules: [
@@ -11,7 +12,13 @@ module.exports = {
             use: {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/preset-env']
+                presets: ['@babel/preset-env'],
+                plugins: [
+                  require("@babel/plugin-transform-async-to-generator"),
+                  require('@babel/plugin-transform-runtime'),
+                  require("@babel/plugin-transform-arrow-functions"),
+                  require("@babel/plugin-transform-modules-commonjs")
+              ]
               }
             }
           }
