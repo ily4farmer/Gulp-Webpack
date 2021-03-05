@@ -15,7 +15,7 @@ module.exports = function htmlBuild() {
             }
           ))
         .pipe(gulpReplace(/^\s*\n/mg, ''))
-        .pipe(webphtml())
+        // .pipe(webphtml())
         .pipe(formatHtml())
         .pipe(gulp.dest('dist'))
 }

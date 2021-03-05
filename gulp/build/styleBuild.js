@@ -11,7 +11,7 @@ module.exports = function styleBuild() {
     return gulp.src('app/sass/style.sass')
         .pipe(sass())
         .pipe(shorthand())
-        .pipe(webpcss())
+        // .pipe(webpcss())
         .pipe(autoprefixer(
             {   
                 overrideBrowserslist:  ['last 10 versions'],

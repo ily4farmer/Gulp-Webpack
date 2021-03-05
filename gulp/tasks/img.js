@@ -16,10 +16,10 @@ module.exports = function styles() {
             ]
         }))
         .pipe(gulp.dest('dist/img'))
-        .pipe(webp(
-            {
-                quality: 70
-            })
-        )
-        .pipe(gulp.dest('dist/img'))
+        // .pipe(webp(
+        //     {
+        //         quality: 70
+        //     })
+        // )
+        // .pipe(gulp.dest('dist/img'))
 }
