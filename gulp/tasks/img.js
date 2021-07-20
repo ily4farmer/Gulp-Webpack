@@ -4,7 +4,7 @@ const webp = require('gulp-webp');
 
 
 module.exports = function styles() {
-    return gulp.src('app/img/**/*.{gif,png,jpg,webp}')
+    return gulp.src('app/img/**/*.{gif,png,jpg,webp,svg}')
         .pipe(imagemin({
             interlaced: true,
             progressive: true,

@@ -1,6 +1,14 @@
 'use strict'
-import slider from './components/slider'
 
 document.addEventListener("DOMContentLoaded", () => {
-    slider();
+  var swiper = new Swiper(".slider-swiper", {
+    slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+    },
+  });
   });

@@ -31,11 +31,11 @@ function watching() {
 	gulp.watch(["app/**/*.js"]).on('change', browserSync.reload);
 	gulp.watch(["app/img/**/*.{gif,png,jpg,webp}"], img);
 	gulp.watch(["app/fonts/*"], fonts);
-	gulp.watch(["app/img/**/*.svg"], svg);
+	// gulp.watch(["app/img/**/*.svg"], svg);
 }
 
 
-const task = gulp.parallel(styles, html, script, img, fonts, svg);
+const task = gulp.parallel(styles, html, script, img, fonts);
 const dev = gulp.series(clean, task);
 
 const wat = gulp.parallel(browsersync, watching);
@@ -43,4 +43,4 @@ const wat = gulp.parallel(browsersync, watching);
 exports.default = gulp.parallel(dev, wat);
 
 
-exports.build = gulp.series(clean, htmlBuild, styl, scriptBuild, img, fonts, svgBuild)
+exports.build = gulp.series(clean, htmlBuild, styl, scriptBuild, img, fonts)

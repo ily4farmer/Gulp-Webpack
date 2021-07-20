@@ -1,6 +1,6 @@
 
 const slider = () => {
-    console.log(1);
+    // new Swiper('.slider__list')
 }
 
 module.exports = slider;
